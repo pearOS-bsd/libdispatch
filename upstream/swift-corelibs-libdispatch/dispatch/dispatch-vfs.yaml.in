@@ -1,0 +1,17 @@
+---
+version: 0
+case-sensitive: false
+use-external-names: false
+roots:
+  - name: "@PROJECT_SOURCE_DIR@"
+    type: directory
+    contents:
+      - name: module.modulemap
+        type: file
+        external-contents: "@PROJECT_SOURCE_DIR@/dispatch/dispatch.modulemap"
+      - name: dispatch
+        type: directory
+        contents:
+          - name: module.modulemap
+            type: file
+            external-contents: "@DISPATCH_MODULE_MAP@"
